@@ -1,0 +1,36 @@
+name: Release
+
+on:
+  push:
+    tags:
+    - "*"
+    
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Check if prerelase  
+      run: |
+        if [[ ${{ github.ref_name }} =~ -(alpha|beta|rc) ]]
+        then
+          echo "PRERELEASE=true" >> $GITHUB_ENV
+        else
+          echo "PRERELEASE=false" >> $GITHUB_ENV
+        fi
+
+    - uses: ncipollo/release-action@v1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        prerelease: ${{ env.PRERELEASE }}
+        body: "Release contains binaries for Linux and Windows."
+        generateReleaseNotes: true
+        
+          
