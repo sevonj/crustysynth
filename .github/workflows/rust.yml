@@ -32,3 +32,26 @@ jobs:
       run: cargo test --verbose
     - name: Clippy
       run: cargo clippy --no-deps --  --deny warnings
+      
+    - name: Generate docs
+      run: cargo doc --no-deps
+    - name: Store docs artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: github-pages
+        path: target/doc/      
+
+  docs:
+    needs: build
+    permissions:
+      pages: write 
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
