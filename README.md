@@ -1,9 +1,9 @@
 # CrustySynth
-
 ![ci badge](https://github.com/sevonj/crustysynth/actions/workflows/rust.yml/badge.svg)
 
-This project is being developed alongside and for [SfontPlayer.](https://github.com/sevonj/sfontplayer)  
-The purpose of CrustySynth is to provide better fitting replacements to some [RustySynth](https://github.com/sinshu/rustysynth/) components, as it has some limitations, such as no support for seeking.
+CrustySynth is a Rust crate for midi files. 
+
+The project is being developed alongside and for [SfontPlayer.](https://github.com/sevonj/sfontplayer) The purpose of CrustySynth is to provide replacements to some [RustySynth](https://github.com/sinshu/rustysynth/) components, as it has some limitations, such as no support for seeking.
 
 This may be useful to you, if you intend to parse or play midi files.
 
