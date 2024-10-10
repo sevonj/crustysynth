@@ -5,6 +5,7 @@ use track::{MidiTrack, MidiTrackError};
 
 pub mod chunks;
 pub mod track;
+pub mod vlq;
 
 #[derive(Debug)]
 pub enum MidiFileError {

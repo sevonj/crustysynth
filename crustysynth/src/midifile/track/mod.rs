@@ -1,10 +1,10 @@
 pub mod event;
 
+use super::{
+    chunks::{MidiChunk, MidiChunkType},
+    vlq::read_vlq,
+};
 use event::{MidiEvent, MidiEventError};
-
-use crate::vlq::read_vlq;
-
-use super::chunks::{MidiChunk, MidiChunkType};
 use std::{error::Error, fmt::Display};
 
 #[derive(Debug)]

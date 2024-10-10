@@ -1,11 +1,11 @@
 use std::{error::Error, fmt::Display};
 
 use crate::{
-    formats::midi::{
+    midi::{
         channels::MidiChannel,
         keys::{MidiKey, MidiKeyError},
     },
-    vlq::read_vlq,
+    midifile::vlq::read_vlq,
 };
 
 #[derive(Debug)]
