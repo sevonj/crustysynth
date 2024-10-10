@@ -13,11 +13,13 @@ https://www.cs.cmu.edu/~music/cmsip/readings/Standard-MIDI-file-format-updated.p
 ## Roadmap:
 
 - [ ] Parse midi files
-  - Format:
-    - [x] Midi keys
-    - [x] Midi channels
-    - [ ] CC message types
-    - [ ] GM instruments
+  - Formats:
+    - [ ] Midi
+      - [x] Midi keys
+      - [x] Midi channels
+      - [ ] CC message types
+      - [ ] GM instruments
+    - [ ] SF2
   - [x] Tracks
   - [x] Midi events
   - [x] System events

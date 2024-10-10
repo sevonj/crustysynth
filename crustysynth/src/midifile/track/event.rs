@@ -1,7 +1,7 @@
 use std::{error::Error, fmt::Display};
 
 use crate::{
-    midi::{
+    formats::midi::{
         channels::MidiChannel,
         keys::{MidiKey, MidiKeyError},
     },
