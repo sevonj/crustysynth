@@ -4,6 +4,8 @@
 This project is being developed alongside and for [SfontPlayer.](https://github.com/sevonj/sfontplayer)  
 The purpose of CrustySynth is to provide better fitting replacements to some [RustySynth](https://github.com/sinshu/rustysynth/) components, as it has some limitations such as no support for seeking.
 
+This may be useful to you, if you intend to parse or play midi files.
+
 ## Roadmap:
 - [ ] Parse midi files 
 - [ ] Play midi files (using RustySynth)
@@ -12,7 +14,10 @@ The purpose of CrustySynth is to provide better fitting replacements to some [Ru
 - **crustysynth**  
   The main event.
 - **crusty-midi-info** (bin)  
-  Example tool that dumps midi info.
+  Example tool that dumps midi info.  
+  Use:  
+  - `crusty-midi-tool samples/salsa.mid > dump.txt`  
+  - `cargo run -p crusty-midi-info -- -f samples/salsa.mid > dump.txt` 
 
 ## Development
 Check out the [linked project](https://github.com/users/sevonj/projects/13) for an overview of issues.
