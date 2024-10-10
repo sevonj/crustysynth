@@ -1,10 +1,10 @@
 use std::{error::Error, fmt::Display, fs::File, io::BufReader};
 
 use chunks::{MidiChunk, MidiChunkError, MidiChunkType};
-use track::{MidiTrack, MidiTrackError};
+use miditrack::{MidiTrack, MidiTrackError};
 
 pub mod chunks;
-pub mod track;
+pub mod miditrack;
 pub mod vlq;
 
 #[derive(Debug)]

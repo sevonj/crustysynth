@@ -1,10 +1,12 @@
-pub mod event;
+//! MIDI file tracks
+
+pub mod midievent;
 
 use super::{
     chunks::{MidiChunk, MidiChunkType},
     vlq::read_vlq,
 };
-use event::{MidiEvent, MidiEventError};
+use midievent::{MidiEvent, MidiEventError};
 use std::{error::Error, fmt::Display};
 
 #[derive(Debug)]

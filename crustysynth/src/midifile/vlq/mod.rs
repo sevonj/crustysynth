@@ -1,6 +1,7 @@
-//! Variable Length Quantity. Explained in midi spec.
-//!
+//! "Variable Length Quantity" is a way to store numbers.
+//! The value is an unsigned integer, of which width is an unknown until fully parsed.
 
+/// Read a vlq from a buffer.
 pub fn read_vlq<R>(file: &mut R) -> Result<usize, std::io::Error>
 where
     R: std::io::Read,
@@ -25,7 +26,6 @@ where
 
 #[cfg(test)]
 mod tests {
-    // Note this useful idiom: importing names from outer (for mod tests) scope.
     use super::*;
 
     /// This will test these examples
