@@ -1,0 +1,570 @@
+File:     "samples/salsa.mid"
+Format:   MultiTrack
+Division: 96
+Tracks:   9
+    Track 0
+        MidiTrackEvent { delta_time: 0, event: Meta { meta_type: 88, data: [4, 2, 24, 8] } }
+        MidiTrackEvent { delta_time: 0, event: Meta { meta_type: 47, data: [] } }
+    Track 1
+        MidiTrackEvent { delta_time: 0, event: Meta { meta_type: 81, data: [12, 229, 14] } }
+        MidiTrackEvent { delta_time: 0, event: Meta { meta_type: 47, data: [] } }
+    Track 2
+        MidiTrackEvent { delta_time: 0, event: Meta { meta_type: 3, data: [84, 114, 97, 99, 107, 32, 49] } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 10, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch1, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch1, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch1, program: 56 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch1, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch1, program: 56 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch1, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 10, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch1, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch1, program: 56 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch1, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 10, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch1, key: F5, vel: 95 } }
+        MidiTrackEvent { delta_time: 16, event: NoteOff { channel: Ch1, key: F5, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch1, key: C5, vel: 95 } }
+        MidiTrackEvent { delta_time: 16, event: NoteOff { channel: Ch1, key: C5, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch1, key: A4, vel: 95 } }
+        MidiTrackEvent { delta_time: 16, event: NoteOff { channel: Ch1, key: A4, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch1, key: C4, vel: 95 } }
+        MidiTrackEvent { delta_time: 16, event: NoteOff { channel: Ch1, key: C4, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch1, key: F4, vel: 95 } }
+        MidiTrackEvent { delta_time: 16, event: NoteOff { channel: Ch1, key: F4, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch1, key: A4, vel: 95 } }
+        MidiTrackEvent { delta_time: 16, event: NoteOff { channel: Ch1, key: A4, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch1, key: F4, vel: 95 } }
+        MidiTrackEvent { delta_time: 16, event: NoteOff { channel: Ch1, key: F4, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch1, key: A4, vel: 95 } }
+        MidiTrackEvent { delta_time: 16, event: NoteOff { channel: Ch1, key: A4, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch1, key: C5, vel: 95 } }
+        MidiTrackEvent { delta_time: 16, event: NoteOff { channel: Ch1, key: C5, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch1, key: A4, vel: 95 } }
+        MidiTrackEvent { delta_time: 16, event: NoteOff { channel: Ch1, key: A4, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch1, key: C5, vel: 95 } }
+        MidiTrackEvent { delta_time: 16, event: NoteOff { channel: Ch1, key: C5, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch1, key: F5, vel: 95 } }
+        MidiTrackEvent { delta_time: 16, event: NoteOff { channel: Ch1, key: F5, vel: 80 } }
+        MidiTrackEvent { delta_time: 24, event: ControlChange { channel: Ch1, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch1, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch1, program: 56 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 1, event: ControlChange { channel: Ch1, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch1, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch1, program: 56 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch1, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch1, program: 56 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch1, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: Meta { meta_type: 47, data: [] } }
+    Track 3
+        MidiTrackEvent { delta_time: 0, event: Meta { meta_type: 3, data: [84, 114, 97, 99, 107, 32, 50] } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 10, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch3, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 10, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch3, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch3, program: 30 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 10, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch3, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch3, program: 30 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch3, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch3, program: 30 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 10, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 10, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch3, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch3, program: 30 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch3, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch3, program: 30 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 10, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 216, event: ControlChange { channel: Ch3, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 10, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch3, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch3, program: 30 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 1, event: ControlChange { channel: Ch3, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 10, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch3, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch3, program: 30 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 10, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch3, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch3, program: 30 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch3, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: Meta { meta_type: 47, data: [] } }
+    Track 4
+        MidiTrackEvent { delta_time: 0, event: Meta { meta_type: 3, data: [84, 114, 97, 99, 107, 32, 51] } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 10, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch5, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch5, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch5, program: 29 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch5, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch5, program: 29 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch5, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch5, program: 29 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 10, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch5, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch5, program: 29 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch5, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch5, program: 29 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 10, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 216, event: ControlChange { channel: Ch5, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch5, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch5, program: 29 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 1, event: ControlChange { channel: Ch5, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch5, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch5, program: 29 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch5, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch5, program: 29 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch5, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: Meta { meta_type: 47, data: [] } }
+    Track 5
+        MidiTrackEvent { delta_time: 0, event: Meta { meta_type: 3, data: [84, 114, 97, 99, 107, 32, 52] } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 10, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch7, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 10, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch7, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch7, program: 24 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 10, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch7, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch7, program: 24 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch7, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch7, program: 24 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 10, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 10, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch7, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch7, program: 24 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch7, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch7, program: 24 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 10, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 216, event: ControlChange { channel: Ch7, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 10, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch7, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch7, program: 24 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 1, event: ControlChange { channel: Ch7, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 10, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch7, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch7, program: 24 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 10, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch7, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch7, program: 24 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch7, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: Meta { meta_type: 47, data: [] } }
+    Track 6
+        MidiTrackEvent { delta_time: 0, event: Meta { meta_type: 3, data: [80, 101, 114, 99, 117, 115, 115, 105, 111, 110] } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch10, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch10, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch10, program: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch10, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch10, program: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch10, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch10, program: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch10, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch10, program: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch10, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch10, program: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch10, key: GS4, vel: 96 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch10, key: F4, vel: 95 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch10, key: C3, vel: 95 } }
+        MidiTrackEvent { delta_time: 12, event: NoteOff { channel: Ch10, key: GS4, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch10, key: F4, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch10, key: C3, vel: 80 } }
+        MidiTrackEvent { delta_time: 12, event: NoteOff { channel: Ch10, key: C4, vel: 95 } }
+        MidiTrackEvent { delta_time: 12, event: NoteOff { channel: Ch10, key: C4, vel: 80 } }
+        MidiTrackEvent { delta_time: 12, event: NoteOff { channel: Ch10, key: C3, vel: 95 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch10, key: C4, vel: 95 } }
+        MidiTrackEvent { delta_time: 12, event: NoteOff { channel: Ch10, key: C3, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch10, key: C4, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch10, key: D4, vel: 95 } }
+        MidiTrackEvent { delta_time: 12, event: NoteOff { channel: Ch10, key: D4, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch10, key: C3, vel: 95 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch10, key: E3, vel: 95 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch10, key: D4, vel: 95 } }
+        MidiTrackEvent { delta_time: 12, event: NoteOff { channel: Ch10, key: D4, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch10, key: C3, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch10, key: E3, vel: 80 } }
+        MidiTrackEvent { delta_time: 12, event: NoteOff { channel: Ch10, key: C3, vel: 95 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch10, key: F4, vel: 95 } }
+        MidiTrackEvent { delta_time: 12, event: NoteOff { channel: Ch10, key: C3, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch10, key: F4, vel: 80 } }
+        MidiTrackEvent { delta_time: 12, event: NoteOff { channel: Ch10, key: C4, vel: 95 } }
+        MidiTrackEvent { delta_time: 12, event: NoteOff { channel: Ch10, key: C4, vel: 80 } }
+        MidiTrackEvent { delta_time: 12, event: NoteOff { channel: Ch10, key: C4, vel: 95 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch10, key: C3, vel: 95 } }
+        MidiTrackEvent { delta_time: 12, event: NoteOff { channel: Ch10, key: C4, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch10, key: C3, vel: 80 } }
+        MidiTrackEvent { delta_time: 12, event: NoteOff { channel: Ch10, key: C3, vel: 95 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch10, key: E3, vel: 95 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch10, key: C4, vel: 95 } }
+        MidiTrackEvent { delta_time: 12, event: NoteOff { channel: Ch10, key: C3, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch10, key: E3, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch10, key: C4, vel: 80 } }
+        MidiTrackEvent { delta_time: 12, event: NoteOff { channel: Ch10, key: AS4, vel: 127 } }
+        MidiTrackEvent { delta_time: 12, event: NoteOff { channel: Ch10, key: AS4, vel: 80 } }
+        MidiTrackEvent { delta_time: 12, event: ControlChange { channel: Ch10, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch10, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch10, program: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 1, event: ControlChange { channel: Ch10, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch10, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch10, program: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch10, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch10, program: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch10, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: Meta { meta_type: 47, data: [] } }
+    Track 7
+        MidiTrackEvent { delta_time: 0, event: Meta { meta_type: 3, data: [84, 114, 97, 99, 107, 32, 54] } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch9, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch9, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch9, program: 35 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch9, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch9, program: 35 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch9, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch9, program: 35 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch9, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch9, program: 35 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch9, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch9, program: 35 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch9, key: CS3, vel: 95 } }
+        MidiTrackEvent { delta_time: 24, event: NoteOff { channel: Ch9, key: CS3, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch9, key: A2, vel: 95 } }
+        MidiTrackEvent { delta_time: 24, event: NoteOff { channel: Ch9, key: A2, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch9, key: GS2, vel: 95 } }
+        MidiTrackEvent { delta_time: 24, event: NoteOff { channel: Ch9, key: GS2, vel: 80 } }
+        MidiTrackEvent { delta_time: 0, event: NoteOff { channel: Ch9, key: CS3, vel: 95 } }
+        MidiTrackEvent { delta_time: 120, event: NoteOff { channel: Ch9, key: CS3, vel: 80 } }
+        MidiTrackEvent { delta_time: 24, event: ControlChange { channel: Ch9, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch9, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch9, program: 35 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 1, event: ControlChange { channel: Ch9, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch9, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch9, program: 35 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 7, value: 104 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch9, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch9, program: 35 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch9, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: Meta { meta_type: 47, data: [] } }
+    Track 8
+        MidiTrackEvent { delta_time: 0, event: Meta { meta_type: 3, data: [84, 114, 97, 99, 107, 32, 55] } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 7, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch12, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 7, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch12, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch12, program: 29 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 7, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch12, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch12, program: 29 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch12, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch12, program: 29 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 7, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 7, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch12, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch12, program: 29 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch12, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch12, program: 29 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 7, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 216, event: ControlChange { channel: Ch12, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 7, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch12, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch12, program: 29 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 1, event: ControlChange { channel: Ch12, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 7, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch12, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch12, program: 29 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 101, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 100, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 6, value: 12 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 10, value: 64 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 7, value: 127 } }
+        MidiTrackEvent { delta_time: 0, event: PitchBend { channel: Ch12, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ProgramChange { channel: Ch12, program: 29 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 91, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: ControlChange { channel: Ch12, control: 93, value: 0 } }
+        MidiTrackEvent { delta_time: 0, event: Meta { meta_type: 47, data: [] } }

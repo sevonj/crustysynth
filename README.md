@@ -8,6 +8,12 @@ The purpose of CrustySynth is to provide better fitting replacements to some [Ru
 - [ ] Parse midi files 
 - [ ] Play midi files (using RustySynth)
 
+## Crates
+- **crustysynth**  
+  The main event.
+- **crusty-midi-info** (bin)  
+  Example tool that dumps midi info.
+
 ## Development
 Check out the [linked project](https://github.com/users/sevonj/projects/13) for an overview of issues.
 

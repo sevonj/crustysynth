@@ -1,6 +1,8 @@
-[package]
-name = "crustysynth"
-version = "0.1.0"
-edition = "2021"
+[workspace]
 
-[dependencies]
+members = [
+    "crustysynth",
+    "crusty_midi_info",
+]
+
+resolver = "2"
