@@ -48,12 +48,12 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Generate docs
-        run: cargo doc --no-deps -p crustysynth
+        run: cargo doc --lib --no-deps
 
       - name: Store artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: target/doc/crustysynth/
+          path: target/doc/
       
       - name: Deploy to GitHub Pages
         id: deployment
