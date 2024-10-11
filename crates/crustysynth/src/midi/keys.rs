@@ -1,6 +1,6 @@
 use std::{error::Error, fmt::Display};
 
-#[derive(Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MidiKey {
     C0 = 0x00,
     CS0 = 0x01,

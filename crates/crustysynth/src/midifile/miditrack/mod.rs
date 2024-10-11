@@ -38,7 +38,7 @@ impl From<MidiEventError> for MidiTrackError {
     }
 }
 
-#[derive(Debug)]
+#[derive(Clone, Debug)]
 pub struct MidiTrack {
     track_events: Vec<MidiTrackEvent>,
 }
@@ -67,7 +67,7 @@ impl MidiTrack {
     }
 }
 
-#[derive(Debug)]
+#[derive(Clone, Debug)]
 pub struct MidiTrackEvent {
     delta_time: usize,
     event: MidiEvent,

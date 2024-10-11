@@ -3,6 +3,7 @@
 members = [
     "crates/crustysynth",
     "crates/crusty_midi_info",
+    "crates/crusty_sequencer_demo",
 ]
 
 resolver = "2"

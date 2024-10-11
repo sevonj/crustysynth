@@ -35,7 +35,7 @@ impl From<MidiKeyError> for MidiEventError {
     }
 }
 
-#[derive(Debug)]
+#[derive(Clone, Debug)]
 
 pub enum MidiEvent {
     NoteOff {

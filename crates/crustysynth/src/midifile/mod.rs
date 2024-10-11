@@ -1,9 +1,11 @@
 use std::{error::Error, fmt::Display, fs::File, io::BufReader};
 
 use chunks::{MidiChunk, MidiChunkError, MidiChunkType};
+use division::{Division, DivisionError};
 use miditrack::{MidiTrack, MidiTrackError};
 
 pub mod chunks;
+pub mod division;
 pub mod miditrack;
 pub mod vlq;
 
@@ -12,7 +14,10 @@ pub enum MidiFileError {
     IOError { source: std::io::Error },
     ChunkError { source: MidiChunkError },
     TrackError { source: MidiTrackError },
+    DivisionError { source: DivisionError },
     NoHeader,
+    NoTracks,
+    Type0TooManyTracks,
     MultipleHeaders,
     UnknownFormat(u16),
 }
@@ -23,7 +28,12 @@ impl Display for MidiFileError {
             Self::IOError { source } => write!(f, "{source}"),
             Self::ChunkError { source } => write!(f, "{source}"),
             Self::TrackError { source } => write!(f, "{source}"),
+            Self::DivisionError { source } => write!(f, "{source}"),
             Self::NoHeader => write!(f, "Midi file did not start with a header chunk."),
+            Self::NoTracks => write!(f, "Midi file has no track chunks."),
+            Self::Type0TooManyTracks => {
+                write!(f, "Midi file is type 0, but has multiple track chunks.")
+            }
             Self::MultipleHeaders => write!(f, "Midi file contains multople header chunks."),
             Self::UnknownFormat(format) => write!(f, "Midi file states unknown format: {format}"),
         }
@@ -44,11 +54,42 @@ impl From<MidiTrackError> for MidiFileError {
         Self::TrackError { source: e }
     }
 }
+impl From<DivisionError> for MidiFileError {
+    fn from(e: DivisionError) -> Self {
+        Self::DivisionError { source: e }
+    }
+}
 
+/// # Examples
+///
+/// ```
+/// use crustysynth::midifile::MidiFileFormat;
+/// 
+/// assert_eq!(
+///     MidiFileFormat::try_from(0_u16).unwrap(),
+///     MidiFileFormat::SingleTrack
+/// );
+/// assert_eq!(
+///     MidiFileFormat::try_from(1_u16).unwrap(),
+///     MidiFileFormat::MultiTrack
+/// );
+/// assert_eq!(
+///     MidiFileFormat::try_from(2_u16).unwrap(),
+///     MidiFileFormat::MultiTrackAsync
+/// );
+/// 
+/// assert_eq!(MidiFileFormat::SingleTrack as u16, 0);
+/// assert_eq!(MidiFileFormat::MultiTrack as u16, 1);
+/// assert_eq!(MidiFileFormat::MultiTrackAsync as u16, 2);
+///
+/// ```
 #[derive(Debug, PartialEq, Eq, Clone, Copy)]
 pub enum MidiFileFormat {
+    /// Type 0: Single track
     SingleTrack = 0,
+    /// Type 1: Multiple tracks that play simultaneously
     MultiTrack = 1,
+    /// Type 2: Multiple independent tracks (separate songs)
     MultiTrackAsync = 2,
 }
 impl TryFrom<u16> for MidiFileFormat {
@@ -64,11 +105,25 @@ impl TryFrom<u16> for MidiFileFormat {
     }
 }
 
+/// Represents the contents of a MIDI file.
+///
+/// # Examples
+///
+/// ```
+/// // How to read a file:
+///
+/// use crustysynth::midifile::MidiFile;
+/// use std::fs::File;
+///
+/// let file = File::open("samples/salsa.mid").unwrap();
+/// let midi_file: MidiFile = MidiFile::try_from(file).unwrap();
+/// 
+/// ```
 #[derive(Debug)]
 pub struct MidiFile {
     format: MidiFileFormat,
     ntrks: u16,
-    division: u16,
+    division: Division,
     tracks: Vec<MidiTrack>,
 }
 impl Display for MidiFile {
@@ -99,7 +154,11 @@ impl TryFrom<File> for MidiFile {
         let format =
             MidiFileFormat::try_from(u16::from_be_bytes(header_data[0..2].try_into().unwrap()))?;
         let ntrks = u16::from_be_bytes(header_data[2..4].try_into().unwrap());
-        let division = u16::from_be_bytes(header_data[4..6].try_into().unwrap());
+        if format == MidiFileFormat::SingleTrack && ntrks > 1 {
+            return Err(MidiFileError::Type0TooManyTracks);
+        }
+        let division =
+            Division::try_from(u16::from_be_bytes(header_data[4..6].try_into().unwrap()))?;
 
         let mut tracks = vec![];
         for _ in 0..ntrks {
@@ -116,6 +175,9 @@ impl TryFrom<File> for MidiFile {
                 },
             }
         }
+        if tracks.is_empty() {
+            return Err(MidiFileError::NoTracks);
+        }
 
         Ok(Self {
             format,
@@ -129,10 +191,35 @@ impl MidiFile {
     pub fn get_format(&self) -> MidiFileFormat {
         self.format
     }
-    pub fn get_division(&self) -> u16 {
+    pub fn get_division(&self) -> Division {
         self.division
     }
     pub fn get_tracks(&self) -> &Vec<MidiTrack> {
         &self.tracks
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_midi_file_format() {
+        assert_eq!(
+            MidiFileFormat::try_from(0_u16).unwrap(),
+            MidiFileFormat::SingleTrack
+        );
+        assert_eq!(
+            MidiFileFormat::try_from(1_u16).unwrap(),
+            MidiFileFormat::MultiTrack
+        );
+        assert_eq!(
+            MidiFileFormat::try_from(2_u16).unwrap(),
+            MidiFileFormat::MultiTrackAsync
+        );
+
+        assert_eq!(MidiFileFormat::SingleTrack as u16, 0);
+        assert_eq!(MidiFileFormat::MultiTrack as u16, 1);
+        assert_eq!(MidiFileFormat::MultiTrackAsync as u16, 2);
     }
 }

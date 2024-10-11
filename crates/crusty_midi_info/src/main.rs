@@ -22,7 +22,7 @@ fn main() {
     };
     println!("File:     {:?}", args.file);
     println!("Format:   {:?}", midifile.get_format());
-    println!("Division: {}", midifile.get_division());
+    println!("Division: {:?}", midifile.get_division());
     println!("Tracks:   {}", midifile.get_tracks().len());
     for (i, track) in midifile.get_tracks().iter().enumerate() {
         println!("    Track {i}");
