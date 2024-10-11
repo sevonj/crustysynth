@@ -1,8 +1,8 @@
 [workspace]
 
 members = [
-    "crustysynth",
-    "crusty_midi_info",
+    "crates/crustysynth",
+    "crates/crusty_midi_info",
 ]
 
 resolver = "2"
