@@ -1,3 +1,5 @@
+//! Timing format
+
 use core::f64;
 use std::{error::Error, fmt::Display, time::Duration};
 
@@ -17,14 +19,28 @@ impl Display for DivisionError {
         }
     }
 }
-
+/// Division tells how long one tick should take.
+///
+/// # Examples
+///
+/// ```
+/// use crustysynth::midifile::division::Division;
+/// use std::time::Duration;
+/// 
+/// // You most likely want to interact with Division like this, and not deal with its variants:
+/// let bpm = 120.0;
+/// let value: u16 = 0xE332;
+/// let division = Division::try_from(value).unwrap();
+/// let tick_duration = division.get_tick_duration(bpm);
+/// ```
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 pub enum Division {
-    /// How many ticks per quarter note.
+    /// Ticks per beat (quarter note).
     Metrical(usize),
-    /// Tick interval
+    /// Tick interval, independent of BPM.
     TimeCode(Duration),
 }
+
 impl TryFrom<u16> for Division {
     type Error = DivisionError;
 
@@ -54,6 +70,18 @@ impl TryFrom<u16> for Division {
 }
 
 impl Division {
+    /// Get an absolute duration from any kind of `Division`.
+    ///
+    /// Note: BPM has no effect on`Division::TimeCode`
+    /// # Examples
+    ///
+    /// ```
+    /// use crustysynth::midifile::division::Division;
+    ///
+    /// let bpm = 120.0;
+    /// let division = Division::try_from(0xE332).unwrap();
+    /// let duration = division.get_tick_duration(bpm);
+    /// ```
     pub fn get_tick_duration(&self, tempo: f64) -> Duration {
         match self {
             Division::TimeCode(duration) => *duration,

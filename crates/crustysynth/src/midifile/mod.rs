@@ -1,3 +1,5 @@
+//! MIDI file specific definitions
+
 use std::{error::Error, fmt::Display, fs::File, io::BufReader};
 
 use chunks::{MidiChunk, MidiChunkError, MidiChunkType};
@@ -63,8 +65,10 @@ impl From<DivisionError> for MidiFileError {
 /// # Examples
 ///
 /// ```
+/// #[macro_use]
+///
 /// use crustysynth::midifile::MidiFileFormat;
-/// 
+///
 /// assert_eq!(
 ///     MidiFileFormat::try_from(0_u16).unwrap(),
 ///     MidiFileFormat::SingleTrack
@@ -77,7 +81,7 @@ impl From<DivisionError> for MidiFileError {
 ///     MidiFileFormat::try_from(2_u16).unwrap(),
 ///     MidiFileFormat::MultiTrackAsync
 /// );
-/// 
+///
 /// assert_eq!(MidiFileFormat::SingleTrack as u16, 0);
 /// assert_eq!(MidiFileFormat::MultiTrack as u16, 1);
 /// assert_eq!(MidiFileFormat::MultiTrackAsync as u16, 2);
@@ -110,14 +114,11 @@ impl TryFrom<u16> for MidiFileFormat {
 /// # Examples
 ///
 /// ```
-/// // How to read a file:
-///
 /// use crustysynth::midifile::MidiFile;
 /// use std::fs::File;
 ///
-/// let file = File::open("samples/salsa.mid").unwrap();
-/// let midi_file: MidiFile = MidiFile::try_from(file).unwrap();
-/// 
+/// let file = File::open("../../samples/salsa.mid").unwrap();
+/// let midi = MidiFile::try_from(file).unwrap();
 /// ```
 #[derive(Debug)]
 pub struct MidiFile {
@@ -196,30 +197,5 @@ impl MidiFile {
     }
     pub fn get_tracks(&self) -> &Vec<MidiTrack> {
         &self.tracks
-    }
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn test_midi_file_format() {
-        assert_eq!(
-            MidiFileFormat::try_from(0_u16).unwrap(),
-            MidiFileFormat::SingleTrack
-        );
-        assert_eq!(
-            MidiFileFormat::try_from(1_u16).unwrap(),
-            MidiFileFormat::MultiTrack
-        );
-        assert_eq!(
-            MidiFileFormat::try_from(2_u16).unwrap(),
-            MidiFileFormat::MultiTrackAsync
-        );
-
-        assert_eq!(MidiFileFormat::SingleTrack as u16, 0);
-        assert_eq!(MidiFileFormat::MultiTrack as u16, 1);
-        assert_eq!(MidiFileFormat::MultiTrackAsync as u16, 2);
     }
 }

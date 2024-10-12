@@ -1,8 +1,11 @@
 use rustysynth::Synthesizer;
 
-use crate::midifile::{
-    miditrack::{MidiTrack, MidiTrackEvent},
-    MidiFile,
+use crate::{
+    midi::messages::ChannelMessage,
+    midifile::{
+        miditrack::{midievent::MidiEvent, MidiTrack, MidiTrackEvent},
+        MidiFile,
+    },
 };
 
 /// Turn MIDI files and soundfont into audio samples.
@@ -10,20 +13,24 @@ use crate::midifile::{
 /// # Examples
 ///
 /// ```
+/// // Minimal example for getting samples out of a sequencer:
 /// // Notice that the sequencer depends on RustySynth for generating audio.
-/// 
+///
 /// use crustysynth::{midifile::MidiFile, sequencer::MidiSequencer};
 /// use rustysynth::{SoundFont, Synthesizer, SynthesizerSettings};
-/// use std::sync::Arc;
-/// 
-/// let soundfont: Arc<SoundFont> = todo!();
-/// let midi_file: MidiFile = todo!();
+/// use std::{fs::File, sync::Arc};
+///
+/// let mut font_file = File::open("../../samples/Neo1MGM.sf2").unwrap();
+/// let font = Arc::new(SoundFont::new(&mut font_file).unwrap());
+/// let midi_file = File::open("../../samples/salsa.mid").unwrap();
+/// let midi = MidiFile::try_from(midi_file).unwrap();
 ///
 /// let settings = SynthesizerSettings::new(44100);
-/// let synthesizer = Synthesizer::new(&soundfont, &settings).expect("Synth creation failed!");
+/// let synthesizer = Synthesizer::new(&font, &settings).unwrap();
 /// let mut sequencer = MidiSequencer::new(synthesizer);
+/// sequencer.play_midi_file(midi);
 ///
-/// sequencer.play_midi_file(midi_file);
+/// // The sequencer will return Some until it runs out.
 /// let sample: [f32; 2] = sequencer.render().unwrap();
 ///
 /// ```
@@ -34,7 +41,7 @@ pub struct MidiSequencer {
     tracks: Vec<TrackSequencer>,
     /// Number of samples since last division.
     delta_samples: usize,
-    tempo: f64,
+    bpm: f64,
 }
 
 impl MidiSequencer {
@@ -47,7 +54,7 @@ impl MidiSequencer {
             synthesizer,
             tracks: vec![],
             delta_samples: 0,
-            tempo: 120.0,
+            bpm: 120.0,
         }
     }
 
@@ -58,6 +65,8 @@ impl MidiSequencer {
         }
 
         self.midi_file = Some(midi_file);
+
+        self.synthesizer.reset();
     }
 
     pub fn render(&mut self) -> Option<[f32; 2]> {
@@ -73,25 +82,27 @@ impl MidiSequencer {
         }
 
         let samplerate = self.synthesizer.get_sample_rate();
-        let tick_duration = midi.get_division().get_tick_duration(self.tempo);
+        let tick_duration = midi.get_division().get_tick_duration(self.bpm);
 
         let tick_samples = (tick_duration.as_secs_f64() * samplerate as f64) as usize;
         if self.delta_samples == tick_samples {
-            println!("tick: {tick_duration:?}");
-
             self.delta_samples = 0;
             for i in 0..self.tracks.len() {
                 let track = &mut self.tracks[i];
                 let events = track.get_events();
                 for event in events {
-                    println!("Track {i} - {event:?}");
+                    synthesize_event(&mut self.synthesizer, event);
                 }
             }
         } else {
             self.delta_samples += 1;
         }
 
-        Some([609.0, 420.0])
+        let mut l = [0.0];
+        let mut r = [0.0];
+        self.synthesizer.render(&mut l, &mut r);
+
+        Some([l[0], r[0]])
     }
 }
 
@@ -120,14 +131,6 @@ impl TrackSequencer {
         }
         let mut event = &self.track.get_events()[self.next_event_index];
 
-        //println!(
-        //    "tick_delta: {}/{}, next_event: {}/{}",
-        //    self.ticks_since_last,
-        //    event.get_delta_time(),
-        //    self.next_event_index,
-        //    self.track.get_events().len()
-        //);
-
         if self.ticks_since_last < event.get_delta_time() {
             self.ticks_since_last += 1;
             return vec![];
@@ -151,5 +154,70 @@ impl TrackSequencer {
         }
 
         panic!("Somehow we have passed an event.");
+    }
+}
+
+fn synthesize_event(synthesizer: &mut Synthesizer, track_event: &MidiTrackEvent) {
+    let event = track_event.get_event();
+    match event {
+        MidiEvent::Channel(channel_message) => {
+            let command = event.get_command().into();
+            let ch;
+            let data1;
+            let data2;
+            match channel_message {
+                ChannelMessage::NoteOff { channel, key, vel }
+                | ChannelMessage::NoteOn { channel, key, vel } => {
+                    ch = *channel as i32;
+                    data1 = *key as i32;
+                    data2 = *vel as i32;
+                }
+                ChannelMessage::AfterTouch {
+                    channel,
+                    key,
+                    pressure,
+                } => {
+                    ch = *channel as i32;
+                    data1 = *key as i32;
+                    data2 = *pressure as i32;
+                }
+                ChannelMessage::ControlChange {
+                    channel,
+                    control,
+                    value,
+                } => {
+                    ch = *channel as i32;
+                    data1 = *control as i32;
+                    data2 = *value as i32;
+                }
+                ChannelMessage::ProgramChange { channel, program } => {
+                    ch = *channel as i32;
+                    data1 = *program as i32;
+                    data2 = 0;
+                }
+                ChannelMessage::ChannelPressure { channel, value } => {
+                    ch = *channel as i32;
+                    data1 = *value as i32;
+                    data2 = 0;
+                }
+                ChannelMessage::PitchBend { channel, value } => {
+                    ch = *channel as i32;
+                    data1 = *value as i32;
+                    data2 = 0;
+                }
+                ChannelMessage::ChannelMode {
+                    channel,
+                    control,
+                    value,
+                } => {
+                    ch = *channel as i32;
+                    data1 = *control as i32;
+                    data2 = *value as i32;
+                }
+            }
+            synthesizer.process_midi_message(ch, command, data1, data2);
+        }
+        MidiEvent::System(..) => (),
+        MidiEvent::Meta { .. } => (),
     }
 }

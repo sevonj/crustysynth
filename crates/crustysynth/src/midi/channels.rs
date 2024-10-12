@@ -1,4 +1,4 @@
-#[derive(Clone, Copy, Debug)]
+#[derive(Debug, Clone, Copy)]
 pub enum MidiChannel {
     Ch1 = 0x0,
     Ch2 = 0x1,

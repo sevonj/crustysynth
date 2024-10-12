@@ -4,7 +4,7 @@ pub mod midievent;
 
 use super::{
     chunks::{MidiChunk, MidiChunkType},
-    vlq::read_vlq,
+    vlq::{read_vlq, VlqError},
 };
 use midievent::{MidiEvent, MidiEventError};
 use std::{error::Error, fmt::Display};
@@ -12,18 +12,20 @@ use std::{error::Error, fmt::Display};
 #[derive(Debug)]
 pub enum MidiTrackError {
     IOError { source: std::io::Error },
+    VlqError { source: VlqError },
+    EventError { source: MidiEventError },
     InvalidChunkType(MidiChunkType),
-    Event { source: MidiEventError },
 }
 impl Error for MidiTrackError {}
 impl Display for MidiTrackError {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
             Self::IOError { source } => write!(f, "{source}"),
+            Self::VlqError { source } => write!(f, "{source}"),
+            Self::EventError { source } => write!(f, "{source}"),
             Self::InvalidChunkType(chunk_type) => {
                 write!(f, "Chunk is not a track chunk, but a {chunk_type:?}")
             }
-            Self::Event { source } => write!(f, "{source}"),
         }
     }
 }
@@ -34,7 +36,12 @@ impl From<std::io::Error> for MidiTrackError {
 }
 impl From<MidiEventError> for MidiTrackError {
     fn from(e: MidiEventError) -> Self {
-        Self::Event { source: e }
+        Self::EventError { source: e }
+    }
+}
+impl From<VlqError> for MidiTrackError {
+    fn from(e: VlqError) -> Self {
+        Self::VlqError { source: e }
     }
 }
 

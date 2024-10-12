@@ -1,3 +1,5 @@
+//! MIDI file chunks
+
 use std::{
     error::Error,
     fmt::{Debug, Display},

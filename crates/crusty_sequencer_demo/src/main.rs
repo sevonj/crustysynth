@@ -1,15 +1,12 @@
-use std::{
-    fs::File,
-    path::PathBuf,
-    sync::Arc,
-    time::{Duration, Instant},
-};
+mod midisource;
+
+use std::{fs::File, path::PathBuf, sync::Arc, thread, time::Duration};
 
 use clap::Parser;
-use crustysynth::{midifile::MidiFile, sequencer::MidiSequencer};
-use rustysynth::{SoundFont, Synthesizer, SynthesizerSettings};
-
-const SAMPLERATE: u32 = 44100;
+use crustysynth::midifile::MidiFile;
+use midisource::MidiSource;
+use rodio::{OutputStream, Sink};
+use rustysynth::SoundFont;
 
 #[derive(Parser, Debug)]
 #[command(version, about, long_about = None)]
@@ -24,7 +21,7 @@ fn main() {
     let args = Args::parse();
 
     let font = match open_font_file(args.font.clone()) {
-        Ok(fontfile) => Arc::new(fontfile),
+        Ok(soundfont) => Arc::new(soundfont),
         Err(e) => {
             println!("{e}");
             return;
@@ -37,27 +34,14 @@ fn main() {
             return;
         }
     };
-    let settings = SynthesizerSettings::new(SAMPLERATE as i32);
-    let synthesizer = match Synthesizer::new(&font, &settings) {
-        Ok(synth) => synth,
-        Err(e) => {
-            println!("{e}");
-            return;
-        }
-    };
-    let mut sequencer = MidiSequencer::new(synthesizer);
-    sequencer.play_midi_file(midi);
 
-    let sample_time = Duration::from_secs_f64(1.0) / SAMPLERATE;
-    let mut prev_sample_instant = Instant::now();
-    loop {
-        let delta_t = Instant::now() - prev_sample_instant;
-        if delta_t >= sample_time {
-            if sequencer.render().is_none() {
-                break;
-            }
-            prev_sample_instant += sample_time;
-        }
+    let (_stream, stream_handle) = OutputStream::try_default().expect("Could not create stream");
+    let sink = Sink::try_new(&stream_handle).expect("Could not create sink");
+    let midisource = MidiSource::new(&font, midi);
+    sink.append(midisource);
+    sink.play();
+    while !sink.empty() {
+        thread::sleep(Duration::from_millis(100));
     }
 }
 
